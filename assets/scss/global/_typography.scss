@@ -1,0 +1,50 @@
+/* --------------- Typography --------------- */
+html {
+  font-size: 15px;
+}
+
+@font-face {
+  font-family: PlusJakartaSans-Regular;
+  src: url(/assets/fonts/PlusJakartaSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: PlusJakartaSans-Bold;
+  src: url(/assets/fonts/PlusJakartaSans-Bold.ttf);
+}
+
+body {
+  font-family: PlusJakartaSans-Regular;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+h1,
+h3,
+h4 {
+  font-family: PlusJakartaSans-Bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+p {
+  font-size: 1rem;
+}
+
+a {
+  font-family: PlusJakartaSans-Bold;
+  font-weight: 500;
+}
