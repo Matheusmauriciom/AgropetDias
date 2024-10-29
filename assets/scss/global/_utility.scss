@@ -1,0 +1,68 @@
+/* --------------- Utility SCSS --------------- */
+
+/* General styles for global elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  scroll-margin-top: 85px;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* --------------- Layout Utilities --------------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 50px;
+  gap: 40px;
+}
+
+.container-color {
+  background: linear-gradient(
+    -25deg,
+    var(--primaryGradientColor),
+    var(--secondaryGradientColor)
+  );
+
+  &.inverted {
+    background: linear-gradient(
+      -25deg,
+      var(--secondaryGradientColor),
+      var(--primaryGradientColor)
+    );
+  }
+}
+
+/* --------------- Text and Heading Utilities --------------- */
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+
+  p {
+    max-width: 900px;
+  }
+}
+
+hr {
+  max-width: 100px;
+  border: 0;
+  background-color: var(--primaryColor);
+  height: 3px;
+  width: 100%;
+}
+
+.hr-yellow {
+  max-width: 100px;
+  border: 0;
+  background-color: var(--secondaryColor);
+  height: 3px;
+  width: 100%;
+}

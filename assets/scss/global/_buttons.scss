@@ -1,0 +1,28 @@
+/* ---------------  Buttons ---------------  */
+
+.button {
+    padding: 14px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s transform;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  
+    &.btn-color-1 {
+      background-color: var(--btn-color-1);
+      color: white;
+    }
+  
+    &.btn-color-2 {
+      background-color: var(--btn-color-2);
+    }
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
