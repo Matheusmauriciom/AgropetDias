@@ -1,0 +1,570 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+  box-sizing: border-box;
+  scroll-margin-top: 85px;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1280px !important;
+  }
+}
+/* --------------- Typography --------------- */
+html {
+  font-size: 15px;
+}
+
+@font-face {
+  font-family: PlusJakartaSans-Regular;
+  src: url(/assets/fonts/PlusJakartaSans-Regular.ttf);
+}
+@font-face {
+  font-family: PlusJakartaSans-Bold;
+  src: url(/assets/fonts/PlusJakartaSans-Bold.ttf);
+}
+body {
+  font-family: PlusJakartaSans-Regular;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+h1,
+h3,
+h4 {
+  font-family: PlusJakartaSans-Bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  font-family: PlusJakartaSans-Bold;
+  font-weight: 500;
+}
+
+/* --------------- Colors --------------- */
+:root {
+  --swiper-theme-color: #ffffff !important;
+  --white: #ffffff;
+  --black: #000000;
+  --backgroundColor: #ffffff;
+  --primaryColor: #0c57a0;
+  --secondaryColor: #ffed00;
+  --textColor: #333333;
+  --primaryGradientColor: #f8f8f8;
+  --secondaryGradientColor: #f8f8f8eb;
+  --gray: #cececec1;
+  --blueDetail: #007bff;
+  --btn-color-1: #0c57a0;
+  --btn-color-2: #ffed00;
+  /* testimonials */
+  --yellowStar: #ffc107;
+  --job: #666;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+label {
+  color: var(--textColor);
+}
+
+.h1 {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+/* Text color for containers that have a gradient background */
+.container-color h2,
+.container-color h3,
+.container-color h4,
+.container-color p {
+  color: var(--textColor) !important;
+}
+
+/* Header Navigation Color */
+nav a {
+  color: var(--white);
+}
+
+/* --------------- Mobile Nav Buttons --------------- */
+#hamburger,
+#close {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(87%) saturate(4126%) hue-rotate(1deg) brightness(104%) contrast(103%);
+}
+
+/* Swiper text color */
+.swiper h1,
+.swiper p {
+  color: var(--white);
+}
+
+/* Button Text Color */
+.button.btn-color-1 {
+  color: var(--white);
+}
+.button.btn-color-2 {
+  color: var(--textColor);
+}
+
+/* Footer Colors */
+footer h3,
+footer h4,
+footer p,
+footer a {
+  color: var(--white);
+}
+footer .copyright {
+  background-color: var(--backgroundColor);
+}
+footer .copyright p,
+footer .copyright a {
+  color: var(--black);
+}
+
+/* --------------- Utility SCSS --------------- */
+/* General styles for global elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  scroll-margin-top: 85px;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* --------------- Layout Utilities --------------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 50px;
+  gap: 40px;
+}
+
+.container-color {
+  background: linear-gradient(-25deg, var(--primaryGradientColor), var(--secondaryGradientColor));
+}
+.container-color.inverted {
+  background: linear-gradient(-25deg, var(--secondaryGradientColor), var(--primaryGradientColor));
+}
+
+/* --------------- Text and Heading Utilities --------------- */
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+.heading p {
+  max-width: 900px;
+}
+
+hr {
+  max-width: 100px;
+  border: 0;
+  background-color: var(--primaryColor);
+  height: 3px;
+  width: 100%;
+}
+
+.hr-yellow {
+  max-width: 100px;
+  border: 0;
+  background-color: var(--secondaryColor);
+  height: 3px;
+  width: 100%;
+}
+
+/* ---------------  Buttons ---------------  */
+.button {
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s transform;
+}
+.button:hover {
+  transform: scale(1.1);
+}
+.button.btn-color-1 {
+  background-color: var(--btn-color-1);
+  color: white;
+}
+.button.btn-color-2 {
+  background-color: var(--btn-color-2);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* --------------- Header  --------------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--primaryColor);
+  box-shadow: 0px 0px 5px rgba(126, 126, 126, 0.534);
+}
+header .header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 90px;
+  padding: 1.5rem;
+  width: 100%;
+  align-items: center;
+}
+header .header-content .header-logo {
+  display: block;
+  font-size: 0;
+}
+header .header-content .header-logo img {
+  max-width: 130px;
+  object-fit: contain;
+}
+header .header-content nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+header .header-content nav a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+header .header-content nav a:hover {
+  color: var(--secondaryColor);
+}
+header .header-content nav .socials a {
+  transition: color 0.3s ease;
+}
+header .header-content nav .socials a:hover {
+  color: var(--secondaryColor);
+}
+
+/* ---------------  Socials --------------- */
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  border-left: 2px solid var(--secondaryColor);
+  padding-left: 30px;
+}
+.socials a {
+  font-size: 17px;
+}
+
+/* --------------- Mobile Nav Buttons --------------- */
+#hamburger,
+#close {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* --------------- Media Queries --------------- */
+@media only screen and (max-width: 992px) {
+  header .header-content nav {
+    gap: 20px;
+  }
+  header .header-content nav a {
+    font-size: 0.9rem;
+  }
+  header .header-content nav .socials {
+    padding-left: 20px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  header .header-content nav {
+    display: flex !important;
+  }
+}
+@media only screen and (max-width: 769px) {
+  header .header-content nav {
+    display: none;
+    background: var(--primaryColor);
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    gap: 15px;
+  }
+  header .header-content nav a {
+    font-size: 1.2rem;
+  }
+  header .header-content nav .socials {
+    border: none;
+    padding: 0;
+    gap: 20px;
+    margin: 10px 0;
+  }
+  header .header-content nav .socials i {
+    font-size: 24px;
+  }
+  #hamburger,
+  #close {
+    display: block;
+  }
+  #close {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/* MOBILE PEQUENO Estilos para telas menores ou iguais a 600px. */
+@media only screen and (max-width: 600px) {
+  * {
+    scroll-margin-top: 70px;
+  }
+  header .header-content {
+    height: 70px;
+  }
+  #close {
+    top: 20px;
+  }
+  .container {
+    padding: 20px;
+  }
+}
+/* --------------- Header swiper --------------- */
+.swiper-header {
+  height: 80vh;
+  user-select: none;
+}
+.swiper-header .swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+.swiper-header .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.swiper-header .swiper-content {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 0 55px;
+}
+.swiper-header .swiper-content h1,
+.swiper-header .swiper-content p {
+  max-width: 600px;
+}
+
+/* --------------- Media Queries --------------- */
+@media only screen and (max-width: 768px) {
+  .swiper {
+    height: 70vh;
+  }
+  .swiper .swiper-content {
+    padding: 40px;
+    height: 100%;
+    min-height: 500px;
+  }
+  .swiper img {
+    filter: brightness(0.5);
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 15px !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

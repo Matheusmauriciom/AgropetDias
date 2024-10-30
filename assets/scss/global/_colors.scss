@@ -1,0 +1,111 @@
+/* --------------- Colors --------------- */
+
+:root {
+    --swiper-theme-color: #ffffff !important;
+  
+    --white: #ffffff;
+    --black: #000000;
+  
+    --backgroundColor: #ffffff;
+  
+    --primaryColor: #0c57a0;
+    --secondaryColor: #ffed00;
+    --textColor: #333333;
+  
+    --primaryGradientColor: #f8f8f8;
+    --secondaryGradientColor: #f8f8f8eb;
+    
+    //  --primaryGradientColor: #d4ebff;
+    //  --secondaryGradientColor: #fff2cc;
+  
+    --gray: #cececec1;
+    --blueDetail: #007bff;
+  
+  
+    --btn-color-1: #0c57a0;
+    --btn-color-2: #ffed00;
+  
+    /* testimonials */
+    --yellowStar: #ffc107;
+    --job: #666;
+  }
+  
+  body {
+    background-color: var(--backgroundColor);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  label {
+    color: var(--textColor);
+  }
+  .h1{
+    color: var(--white);
+    font-size: 2rem;
+  }
+  
+  /* Text color for containers that have a gradient background */
+  .container-color {
+    h2,
+    h3,
+    h4,
+    p {
+      color: var(--textColor) !important;
+    }
+  }
+  
+  /* Header Navigation Color */
+  nav a {
+    color: var(--white);
+  }
+  
+  /* --------------- Mobile Nav Buttons --------------- */
+  
+  #hamburger,
+  #close {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(87%) saturate(4126%)
+      hue-rotate(1deg) brightness(104%) contrast(103%);
+  }
+  
+  /* Swiper text color */
+  .swiper {
+    h1,
+    p {
+      color: var(--white);
+    }
+  }
+  
+  /* Button Text Color */
+  
+  .button {
+    &.btn-color-1 {
+      color: var(--white);
+    }
+  
+    &.btn-color-2 {
+      color: var(--textColor);
+    }
+  }
+  
+  /* Footer Colors */
+  
+  footer {
+    h3,
+    h4,
+    p,
+    a {
+      color: var(--white);
+    }
+  
+    .copyright {
+      background-color: var(--backgroundColor);
+      p,
+      a {
+        color: var(--black);
+      }
+    }
+  }
+  

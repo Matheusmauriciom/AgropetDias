@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agropet Dias</title>
+
+    <link rel="stylesheet" href="/assets/scss/style.css">
+
+    <!-- Font Awesome icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<body>
-    
+
+<body id="home">
+
+    <header>
+        <div class="header-content">
+            <a class="header-logo" href="">
+                <img src="assets/images/logo.jpg" alt="logo">
+            </a>
+            <img src="./assets/icons/menu.svg" id="hamburger" alt="menu">
+            <nav>
+                <img src="./assets/icons/close.svg" id="close" alt="close">
+                <a class="nav-item" href="#home">Inicio</a>
+                <a class="nav-item" href="#services">Serviços</a>
+                <a class="nav-item" href="#structure">Nossa Estrutura</a>
+                <a class="nav-item" href="#contactus">Contato</a>
+                <div class="socials">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-solid fa-location-dot"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- swiper header -->
+    <section class="swiper mySwiper swiper-header">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/assets/images/dog1.jpg" alt="">
+
+                <div class="swiper-content">
+                    <h1>Seu pet <br>BEM CUIDADO</h1>
+                    <p>
+                        Somos apaixonados por cuidar do seu pet! Com uma equipe especializada,
+                        e um ambiente acolhedor, oferecemos serviços dedicados ao bem-estar
+                        e conforto dos seus animais, Aqui, cada pet é tratado como parte da nossa
+                        família !
+                    </p>
+                    <div class="buttons">
+                        <a href="#introduction" class="button btn-color-1">Saiba mais</a>
+                        <a href="#contactus" class="button btn-color-2">Entre em contato</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/images/dog2.webp" alt="" loading="lazy">
+                <div class="swiper-content">
+                    <h2 class="h1">Nossos serviços</h2>
+                    <p>
+                        Descubra nossa gama completa de serviços para pets,
+                        incluindo banho e tosa profissional, táxi dog e hospedagem.<br>
+                        Garantimos que seu pet receba o melhor cuidado e toda a atenção que ele merece
+                    </p>
+                    <a href="#services" class="button btn-color-1">Nossos serviços</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/images/dog3.webp" alt="" loading="lazy">
+                <div class="swiper-content">
+                    <h2 class="h1">Nossa estrutura</h2>
+                    <p>
+                        Contamos com um espaço seguro e confortável,
+                        com áreas dedicadas para banho, tosa e hospedagem.
+                        Tudo pensado para garantir o bem-estar do seu pet
+                        enquanto ele recebe o cuidado que merece.
+                    </p>
+                    <a href="#services" class="button btn-color-2">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Componentes -->
+    <script src="/assets/js/header_menu.js" defer></script>
+    <script src="/assets/js/header_swiper.js" defer></script>
 </body>
+
 </html>
