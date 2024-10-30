@@ -566,5 +566,38 @@ header .header-content nav .socials a:hover {
     font-size: 15px !important;
   }
 }
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 40px;
+}
+.grid-col-2 .grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+}
+.grid-col-2 .grid-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* --------------- Media Queries --------------- */
+@media only screen and (max-width: 1200px) {
+  .grid-col-2 {
+    gap: 25px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .grid-col-2,
+  .service-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-grid .service-box {
+    aspect-ratio: unset;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
