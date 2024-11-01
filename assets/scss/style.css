@@ -1054,5 +1054,15 @@ form button {
     grid-template-columns: 1fr;
   }
 }
+/* --------------- Leaflet map --------------- */
+#map {
+  height: 450px;
+  z-index: 1;
+  max-width: 100%;
+}
+
+.leaflet-right {
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */
