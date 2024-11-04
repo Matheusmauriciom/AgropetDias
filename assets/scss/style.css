@@ -406,15 +406,31 @@ header .header-content nav {
   align-items: center;
   gap: 30px;
   text-align: center;
+  /* Novos estilos para ul e li */
 }
-header .header-content nav a {
+header .header-content nav .nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header .header-content nav .nav-list li a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-header .header-content nav a:hover {
+header .header-content nav .nav-list li a:hover {
   color: var(--secondaryColor);
 }
+header .header-content nav .socials {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  border-left: 2px solid var(--secondaryColor);
+  padding-left: 30px;
+}
 header .header-content nav .socials a {
+  font-size: 17px;
   transition: color 0.3s ease;
 }
 header .header-content nav .socials a:hover {
@@ -422,18 +438,6 @@ header .header-content nav .socials a:hover {
 }
 header .header-content .nav-item.active {
   color: var(--secondaryColor);
-}
-
-/* ---------------  Socials --------------- */
-.socials {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  border-left: 2px solid var(--secondaryColor);
-  padding-left: 30px;
-}
-.socials a {
-  font-size: 17px;
 }
 
 /* --------------- Mobile Nav Buttons --------------- */
@@ -449,7 +453,7 @@ header .header-content .nav-item.active {
   header .header-content nav {
     gap: 20px;
   }
-  header .header-content nav a {
+  header .header-content nav .nav-list li a {
     font-size: 0.9rem;
   }
   header .header-content nav .socials {
@@ -475,7 +479,11 @@ header .header-content .nav-item.active {
     z-index: 10;
     gap: 15px;
   }
-  header .header-content nav a {
+  header .header-content nav .nav-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  header .header-content nav .nav-list li a {
     font-size: 1.2rem;
   }
   header .header-content nav .socials {

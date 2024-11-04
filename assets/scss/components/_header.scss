@@ -35,40 +35,47 @@ header {
       gap: 30px;
       text-align: center;
 
-      a {
-        text-decoration: none;
-        transition: color 0.3s ease;
+      /* Novos estilos para ul e li */
+      .nav-list {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-        &:hover {
-          color: var(--secondaryColor);
+        li {
+          a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: var(--secondaryColor);
+            }
+          }
         }
       }
 
-      .socials a {
-        transition: color 0.3s ease;
+      .socials {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        border-left: 2px solid var(--secondaryColor);
+        padding-left: 30px;
 
-        &:hover {
-          color: var(--secondaryColor);
+        a {
+          font-size: 17px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: var(--secondaryColor);
+          }
         }
       }
     }
+
     .nav-item.active {
       color: var(--secondaryColor);
     }
-  }
-}
-
-/* ---------------  Socials --------------- */
-
-.socials {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  border-left: 2px solid var(--secondaryColor);
-  padding-left: 30px;
-
-  a {
-    font-size: 17px;
   }
 }
 
@@ -87,7 +94,7 @@ header {
     .header-content {
       nav {
         gap: 20px;
-        a {
+        .nav-list li a {
           font-size: 0.9rem;
         }
 
@@ -125,8 +132,13 @@ header {
         z-index: 10;
         gap: 15px;
 
-        a {
-          font-size: 1.2rem;
+        .nav-list {
+          flex-direction: column;
+          gap: 20px;
+
+          li a {
+            font-size: 1.2rem;
+          }
         }
 
         .socials {
