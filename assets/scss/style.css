@@ -420,6 +420,9 @@ header .header-content nav .socials a {
 header .header-content nav .socials a:hover {
   color: var(--secondaryColor);
 }
+header .header-content .nav-item.active {
+  color: var(--secondaryColor);
+}
 
 /* ---------------  Socials --------------- */
 .socials {
